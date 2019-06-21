@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login as Doctor</title>
+</head>
+<body>
+    <div class="jumbotron">
+    <form action="{% url 'patient_login' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Email</label>
+        <input type="text" name = 'email' class="form-control">
+        <label>Gender</label>
+        <input type="checkbox" name = 'gender' class="form-control">
+        <label>Password</label>
+        <input type="password" name = 'password' class="form-control">
+        <input type="submit" value="Login" class="btn btn-dark" >
+</form>
+</body>
+</html>
