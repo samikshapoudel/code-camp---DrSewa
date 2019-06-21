@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'patient',
     'doctor'
 ]
 
@@ -131,10 +130,6 @@ STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
-AUTH_USER_MODEL = 'patient.Custom_patient'
-
-# AUTH_USER_MODEL = 'doctor.Custom_doctor'
-
-AUTHENTICATION_BACKENDS = ['backends.CustomAuthBackend']
+# AUTH_USER_MODEL = 'doctor.Doctor'
 
 

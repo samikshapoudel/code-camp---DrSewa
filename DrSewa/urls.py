@@ -15,12 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from patient import urls as patient_url
 from doctor import urls as doctor_url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(patient_url)),
-    path('patient/', include(patient_url)),
+    # path('', include(patient_url)),
+    path('', include(doctor_url)),
     path('doctor/', include(doctor_url))
 ]

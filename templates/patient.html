@@ -4,21 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <title>Doctor</title>
+    <title>Patient</title>
 </head>
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
+            <a class="navbar-brand" href="#">Navbar</a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-
-                <li class="nav-item active"><a class="nav-link" href="{% url 'doctor_signup' %}"> SignUp </a></li>
+                <li class="nav-item active"><a class="nav-link" href="{% url 'patient_signup' %}"> SignUp </a></li>
                 {% if user.is_authenticated %}
-                    <li class="nav-item active"><a class="nav-link" href="{% url 'doctor_logout' %}"> Logout </a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{% url 'patient_logout' %}"> Logout </a></li>
                 {% else %}
-                    <li class="nav-item active"><a class="nav-link" href="{% url 'doctor_login' %}"> Login </a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{% url 'patient_login' %}"> Login </a></li>
                 {% endif %}
             </div>
         </nav>

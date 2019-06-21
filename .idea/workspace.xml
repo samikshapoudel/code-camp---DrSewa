@@ -2,196 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a01c1d0c-dffc-45d5-979f-7fdf2d754210" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/doctor/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patient/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patient/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/aos.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-datepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/css/mixins/_text-hide.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/flaticon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/icomoon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/ionicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/jquery.timepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/magnific-popup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/open-iconic-bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/owl.theme.default.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/flaticon/backup.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/flaticon/font/Flaticon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/flaticon/font/Flaticon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/flaticon/font/Flaticon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/flaticon/font/Flaticon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/flaticon/font/_flaticon.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/flaticon/font/flaticon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/flaticon/font/flaticon.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/flaticon/license/license.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/icomoon/icomoon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/icomoon/icomoon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/icomoon/icomoon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/icomoon/icomoon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/ionicons/css/_ionicons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/ionicons/css/ionicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/ionicons/fonts/ionicons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/ionicons/fonts/ionicons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/ionicons/fonts/ionicons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/ionicons/fonts/ionicons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/ionicons/fonts/ionicons.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/open-iconic/open-iconic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/open-iconic/open-iconic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/open-iconic/open-iconic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/open-iconic/open-iconic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/open-iconic/open-iconic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/about.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/bg_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/bg_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/bg_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/bg_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/bg_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/bg_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/dept-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/dept-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/dept-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/dept-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/doctor-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/doctor-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/doctor-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/doctor-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/image-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/image_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/image_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/image_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/image_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/image_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/image_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/loc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/person_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/person_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/person_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/person_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/aos.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/bootstrap-datepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/google-map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery-migrate-3.0.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.animateNumber.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.easing.1.3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.magnific-popup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.stellar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.timepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.waypoints.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/range.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/scrollax.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_alert.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_badge.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_breadcrumb.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_button-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_carousel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_close.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_code.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_custom-forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_dropdown.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_functions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_images.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_input-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_jumbotron.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_list-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_media.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_modal.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_nav.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_navbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_popover.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_print.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_progress.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_reboot.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_root.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_tables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_tooltip.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_transitions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_type.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/bootstrap-grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/bootstrap-reboot.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/bootstrap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_alert.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_background-variant.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_badge.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_border-radius.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_box-shadow.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_breakpoints.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_caret.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_clearfix.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_float.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_gradients.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_grid-framework.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_hover.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_image.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_list-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_lists.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_nav-divider.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_reset-text.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_resize.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_size.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_table-row.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_text-emphasis.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_text-hide.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_text-truncate.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_transition.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/mixins/_visibility.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/utilities/_align.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/utilities/_background.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/utilities/_borders.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/utilities/_clearfix.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/utilities/_display.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/utilities/_embed.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/utilities/_flex.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/utilities/_float.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/utilities/_position.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/utilities/_screenreaders.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/utilities/_shadows.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/utilities/_sizing.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/utilities/_spacing.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/utilities/_text.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/bootstrap/utilities/_visibility.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/blog-single.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/createreport.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/createreportDr.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/department-single.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/departments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/doctor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/doctor_login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/doctor_signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/patient_login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/patient_signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/doctors.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/makeappointment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/patient.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/signup_form.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../remedic/.idea/remedic.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../weather_app/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../weather_app/.idea/modules.xml" afterDir="false" />
@@ -200,6 +17,30 @@
       <change afterPath="$PROJECT_DIR$/../weather_app/templates/weather/weather.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../weather_app/weather/forms.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../weather_app/weather/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DrSewa/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DrSewa/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DrSewa/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DrSewa/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctor/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctor/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctor/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctor/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/migrations/0002_auto_20190620_1304.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/doctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/doctor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/doctor_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/doctor_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/patient_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient_login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -212,26 +53,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/patient_login.html">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/doctor_login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="65" lean-forward="true" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="41" column="55" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doctor/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" column="65" lean-forward="true" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/about.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/patient/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+              <caret line="24" column="69" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -240,19 +90,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/createreport.html">
+        <entry file="file://$PROJECT_DIR$/doctor/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="256">
+              <caret line="191" column="54" lean-forward="true" selection-start-line="191" selection-start-column="54" selection-end-line="191" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/patient/forms.py">
+        <entry file="file://$PROJECT_DIR$/templates/doctors.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="31" column="52" lean-forward="true" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/patient.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="7" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/doctor/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="75" column="1" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doctor/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -261,52 +141,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/blog.html">
+        <entry file="file://$PROJECT_DIR$/templates/doctor_signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/patient_signup.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/createreportDr.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/doctor/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doctor/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="e#0#61#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -321,8 +159,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>vali</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -334,35 +177,33 @@
         <option value="$PROJECT_DIR$/templates/contact.html" />
         <option value="$PROJECT_DIR$/templates/department-single.html" />
         <option value="$PROJECT_DIR$/templates/departments.html" />
-        <option value="$PROJECT_DIR$/templates/doctor.html" />
-        <option value="$PROJECT_DIR$/templates/signup.html" />
-        <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/patient/tests.py" />
-        <option value="$PROJECT_DIR$/DrSewa/urls.py" />
-        <option value="$PROJECT_DIR$/doctor/views.py" />
-        <option value="$PROJECT_DIR$/patient/views.py" />
-        <option value="$PROJECT_DIR$/doctor/urls.py" />
-        <option value="$PROJECT_DIR$/DrSewa/settings.py" />
-        <option value="$PROJECT_DIR$/patient/urls.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/doctor_signup.html" />
-        <option value="$PROJECT_DIR$/templates/doctor_login.html" />
         <option value="$PROJECT_DIR$/templates/patient_signup.html" />
-        <option value="$PROJECT_DIR$/templates/patient_login.html" />
         <option value="$PROJECT_DIR$/templates/upload_document.html" />
         <option value="$PROJECT_DIR$/templates/createreportDr.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/templates/signup.html" />
+        <option value="$PROJECT_DIR$/templates/signup_form.html" />
+        <option value="$PROJECT_DIR$/patient/views.py" />
         <option value="$PROJECT_DIR$/patient/models.py" />
         <option value="$PROJECT_DIR$/patient/forms.py" />
+        <option value="$PROJECT_DIR$/patient/urls.py" />
+        <option value="$PROJECT_DIR$/DrSewa/settings.py" />
+        <option value="$PROJECT_DIR$/DrSewa/urls.py" />
+        <option value="$PROJECT_DIR$/doctor/apps.py" />
+        <option value="$PROJECT_DIR$/templates/doctor_signup.html" />
+        <option value="$PROJECT_DIR$/templates/makeappointment.html" />
+        <option value="$PROJECT_DIR$/templates/patient.html" />
+        <option value="$PROJECT_DIR$/templates/doctor.html" />
+        <option value="$PROJECT_DIR$/templates/doctor_login.html" />
+        <option value="$PROJECT_DIR$/templates/patient_login.html" />
+        <option value="$PROJECT_DIR$/templates/doctors.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/doctor/forms.py" />
+        <option value="$PROJECT_DIR$/doctor/urls.py" />
+        <option value="$PROJECT_DIR$/doctor/views.py" />
         <option value="$PROJECT_DIR$/doctor/models.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/../remedic/.idea/remedic.iml" />
       </list>
     </option>
   </component>
@@ -395,12 +236,18 @@
             <path>
               <item name="DrSewa" type="b2602c69:ProjectViewProjectNode" />
               <item name="DrSewa" type="462c0819:PsiDirectoryNode" />
-              <item name="patient" type="462c0819:PsiDirectoryNode" />
+              <item name="DrSewa" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DrSewa" type="b2602c69:ProjectViewProjectNode" />
               <item name="DrSewa" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DrSewa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DrSewa" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DrSewa" type="b2602c69:ProjectViewProjectNode" />
@@ -416,18 +263,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/ProThree" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/css" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/static/css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates/patient" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/css" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -459,7 +307,7 @@
     <frame x="49" y="25" width="1317" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28902626" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2882535" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -479,9 +327,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/patient/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -492,20 +337,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/doctor.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/patient/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="86" column="14" selection-start-line="86" selection-start-column="14" selection-end-line="86" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/doctor.jpeg" />
+    <entry file="file://$PROJECT_DIR$/templates/patient/index.html" />
     <entry file="file://$PROJECT_DIR$/static/css/css/mixins/_text-hide.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -543,109 +376,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/doctor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/patient/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DrSewa/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#630#662#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/patient/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doctor/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="45" column="157" selection-start-line="45" selection-start-column="157" selection-end-line="45" selection-end-column="157" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/patient/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DrSewa/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/doctor_signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doctor/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/doctor_login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="7" lean-forward="true" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/patient_login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="65" lean-forward="true" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -663,10 +397,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/patient_signup.html">
+    <entry file="file://$PROJECT_DIR$/templates/blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -677,43 +411,193 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="79" column="7" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3239#3246#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/signup_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/patient/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/patient/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/patient/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/patient/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="59" column="38" lean-forward="true" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DrSewa/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctor/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctor/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#442#449#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/makeappointment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DrSewa/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/patient_signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/doctor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/doctor_login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="65" lean-forward="true" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/patient_login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/doctor_signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/patient.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/doctors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="31" column="52" lean-forward="true" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="41" column="55" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctor/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="24" column="69" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/doctor/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="240">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
           <folding>
-            <element signature="e#0#61#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctor/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="191" column="54" lean-forward="true" selection-start-line="191" selection-start-column="54" selection-end-line="191" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/doctor/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="75" column="1" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
         </state>
       </provider>
     </entry>

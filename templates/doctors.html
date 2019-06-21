@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>List of doctors</title>
+</head>
+<body>
+<div class="container">
+    <table border=" 2 " class="table">
+        <thead>
+            <tr>
+                <th> Id </th>
+                <th> Name </th>
+                <th> Age </th>
+				<th>Email</th>
+                <th>Specialities</th>
+                <th>Hospitals</th>
+
+            </tr>
+        </thead>
+
+        {% for doctor in doctors %}
+            <tbody>
+                 <tr>
+                    <td> {{ doctor.id }} </td>
+                    <td>{{ doctor.username }}</td>
+                    <td>{{ doctor.age }}</td>
+                    <td>{{ doctor.email }}</td>
+                     <td>{{ doctor.specialities }}</td>
+					 <td>{{ doctor.hospitals }}</td>
+
+                 </tr>
+            </tbody>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
