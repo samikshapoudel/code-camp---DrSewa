@@ -1,9 +1,12 @@
 from django.db import models
+GENDER_CHOICES = (
+   ('MALE', 'Male'),
+   ('FEMALE', 'Female')
+)
 
 class Doctor(models.Model):
     username = models.CharField(max_length=500)
-    password = models.CharField(max_length=50)
-    gender = models.CharField(max_length=50)
+    gender = models.CharField(choices=GENDER_CHOICES, max_length=128)
     year = models.IntegerField()
     month = models.CharField(max_length=50)
     date = models.CharField(max_length= 50)
@@ -12,18 +15,21 @@ class Doctor(models.Model):
     hospitals = models.CharField(max_length=1000)
     rate = models.FloatField()
     email = models.EmailField(unique=True)
-    phone_no = models.CharField(max_length=20)
+    #phone_no = models.CharField(max_length=20)
+    description = models.TextField()
+   # port = models.IntegerField()
 
 
 class Patient(models.Model):
     username = models.CharField(max_length=500)
-    password = models.CharField(max_length=50)
     email = models.EmailField(unique=True)
     year = models.IntegerField()
     month = models.CharField(max_length=200)
     date = models.CharField(max_length=200)
     gender = models.CharField(max_length=20)
     age = models.IntegerField()
+    description = models.TextField()
+    #port = models.IntegerField()
 
 
 class Make_appointment(models.Model):
@@ -50,13 +56,13 @@ class CreateReport(models.Model):
 
 
 class Validate_appointment(models.Model):
-    appointment_id = models.IntegerField()
-    year = models.IntegerField()
-    month = models.CharField(max_length=200)
-    date = models.CharField(max_length=200)
-    hr = models.IntegerField()
-    min = models.IntegerField()
-    changedatetime = models.BooleanField(default=False)
+    appointment_id = models.CharField(max_length=20)
+    year = models.IntegerField(null=True, blank=True)
+    month = models.CharField(max_length=200,null=True, blank=True)
+    date = models.CharField(max_length=200,null=True, blank=True)
+    hr = models.IntegerField(null=True, blank=True)
+    min = models.IntegerField(null=True, blank=True)
+    changedatetime = models.CharField(default=False, max_length=10)
 
 class CreateDrReport(models.Model):
     year = models.IntegerField()

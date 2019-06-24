@@ -1,0 +1,42 @@
+<tr>
+<td>Appointment ID: </td>
+<td>{{ app.appointmentId }} </td>
+</tr>
+<tr>
+<td>Patient: </td>
+<td> {{ app.patient }} </td>
+</tr>
+<tr>
+<td>Doctor: </td>
+<td>{{ app.doctor }} </td>
+</tr>
+<tr>
+<td>Date: </td>
+<td>{{ app.date.year }}/{{ app.date.month }}/{{ app.date.date }}</td>
+</tr>
+<tr>
+<td>Time: </td>
+<td>{{ app.time.hr }}:{{ app.time.min }} </td>
+</tr>
+<tr>
+<td>Valid: </td>
+<td>{{ app.valid }} </td>
+</tr>
+<tr>
+<td>Problems: </td>
+<td>{% for p in app.problems %}
+    {{p}} <br>
+    {% endfor %}
+ </td>
+</tr>
+<tr>
+<td>{{now.year}} / {{now.month}} / {{now.day}} / {{now.hr}}</td>
+</tr>
+{% if app.date.year == now.year and app.date.month == now.month and app.date.date == now.date  %}
+<tr>
+<td>Lets::: <a href="http://aakritsubedi.com.np/subritt/myproject/">Make Call</a></td>
+</tr>
+{% endif %}
+<tr>
+<td>---------------</td>
+</tr>

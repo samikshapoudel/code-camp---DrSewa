@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login as Doctor</title>
+</head>
+<body>
+<table>
+    {% include 'links.html' %}
+    {% for value in data %}
+        {% include 'report_detail.html' with report=value %}
+    {% endfor %}
+</table>
+</body>
+</html>

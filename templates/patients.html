@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>List of Patients</title>
+</head>
+<body>
+    {% include 'links.html' %}
+<h2>Patient List</h2>
+<table>
+    {% for patient in patients %}
+    {% include 'patient_list.html' with pat=patient %}
+    {% endfor %}
+
+    
+</table>
+
+</body>
+
+</html>
+
+
+
+
+
+
+

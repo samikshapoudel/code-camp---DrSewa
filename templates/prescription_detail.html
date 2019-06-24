@@ -1,0 +1,30 @@
+<tr>
+<td>Prescription Id: </td>
+<td>{{pres.prescriptionId}} </td>
+</tr>
+<tr>
+<td>Prescription Date: </td>
+<td>{{pres.prescriptionDate.year}}/{{pres.prescriptionDate.month}}/{{pres.prescriptionDate.date}} </td>
+</tr>
+<tr>
+<td>Diagnosis: </td>
+<td>{{pres.diagnosis}} </td>
+</tr>
+<tr>
+<td>Medications: </td>
+<td>{% for i in pres.medications %}
+        {{i}}<br>
+    {% endfor %}
+ </td>
+</tr>
+<tr>
+<td>Patient: </td>
+<td>{{pres.patient}} </td>
+</tr>
+<tr>
+<td>Doctor: </td>
+<td>{{pres.doctor}} </td>
+</tr>
+<tr>
+<td>---------------</td>
+</tr>

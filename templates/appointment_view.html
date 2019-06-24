@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login as Doctor</title>
+</head>
+<body>
+<table>
+    {% include 'links.html' %}
+    {% for value in data %}
+        {% include 'appointment_detail.html' with app=value now=nowdatetime %}
+    {% endfor %}
+</table>
+</body>
+</html>

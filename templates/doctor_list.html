@@ -1,0 +1,42 @@
+<tr>
+<td>Name: </td>
+<td>{{doc.name}} </td>
+</tr>
+<tr>
+<td>EmailId </td>
+<td>{{doc.emailId}} </td>
+</tr>
+<tr>
+<td>Gender </td>
+<td>{{doc.gender}} </td>
+</tr>
+<tr>
+<td>Specialities </td>
+<td>{% for i in doc.specialities %}
+    {{i}}<br>
+    {% endfor %}
+ </td>
+</tr>
+<tr>
+<td>Education </td>
+<td>{% for i in doc.education %}
+    {{i}}<br>
+    {% endfor %} </td>
+</tr>
+<tr>
+<td>Description </td>
+<td>{{doc.description}} </td>
+</tr>
+<tr>
+<td>Hospitals </td>
+<td>{% for i in doc.hospitals %}
+    {{i}}<br>
+    {% endfor %} </td>
+</tr>
+<tr>
+<td>Ratings </td>
+<td>{{doc.rating}} </td>
+</tr>
+<tr>
+<td>--------------</td>
+</tr>

@@ -7,38 +7,14 @@
     <title>List of doctors</title>
 </head>
 <body>
-<div class="container">
-    <table border=" 2 " class="table">
-        <thead>
-            <tr>
-                <th> Id </th>
-                <th> Name </th>
-                <th> Age </th>
-				<th>Email</th>
-                <th>Specialities</th>
-                <th>Hospitals</th>
 
-            </tr>
-        </thead>
-
-        {% for doctor in doctors %}
-            <tbody>
-                 <tr>
-                    <td> {{ doctor.id }} </td>
-                    <td>{{ doctor.username }}</td>
-                    <td>{{ doctor.age }}</td>
-                    <td>{{ doctor.email }}</td>
-                     <td>{{ doctor.specialities }}</td>
-					 <td>{{ doctor.hospitals }}</td>
-
-                 </tr>
-            </tbody>
-
-        {% endfor %}
-
-    </table>
-
-</div>
+    {% include 'links.html' %}
+<h2>Doctor List</h2>
+<table>
+    {% for doct in doctors %}
+    {% include 'doctor_list.html' with doc=doct %}
+    {% endfor %}
+</table>
 
 </body>
 

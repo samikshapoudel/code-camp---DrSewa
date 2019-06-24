@@ -1,0 +1,32 @@
+<tr>
+<td>Name </td>
+<td>{{pat.name}} </td>
+</tr>
+<tr>
+<td>Email Id </td>
+<td>{{pat.emailId}} </td>
+</tr>
+<tr>
+<td>DOB </td>
+<td>{{pat.dob.year}}/{{pat.dob.month}}/{{pat.dob.date}} </td>
+</tr>
+<tr>
+<td>Gender </td>
+<td>{{pat.gender}} </td>
+</tr>
+<tr>
+<td>Reports </td>
+<td>{% for i in pat.reports %}
+    {{i}}<br>
+    {% endfor %}
+ </td>
+</tr>
+<tr>
+<td>Doctors: </td>
+<td>{% for i in pat.allowedDr %}
+    {{i}}<br>
+    {% endfor %} </td>
+</tr>
+<tr>
+<td>-------------</td>
+</tr>

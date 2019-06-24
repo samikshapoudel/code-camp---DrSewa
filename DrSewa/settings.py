@@ -27,7 +27,7 @@ SECRET_KEY = 'rp^v*6+khe_bks(=1us!j-j@l*y%7qo=6yb=%-ey=6_%r$=yg%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,12 +78,9 @@ WSGI_APPLICATION = 'DrSewa.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'USER' : 'sdadmin',
-        'PASSWORD' : 'admin4321',
-        'NAME': 'drsewa',
-        'HOST' : 'localhost',
-        'PORT' : '3306'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
     }
 }
 

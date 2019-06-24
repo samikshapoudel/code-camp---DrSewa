@@ -18,10 +18,14 @@ urlpatterns = [
 
     path('makeappointment/', views.makeappointment, name = 'makeappointment'),
     path('doctors/', views.doctors, name = 'doctors'),
-    path('validate_appointment/', views.validate, name = 'validate'),
+    path('validateappointment/', views.validate, name = 'validate'),
     path('recharge/', views.recharge, name = 'recharge'),
-    path('drreport/', views.drreport, name = 'drreport'),
+    path('report/', views.drreport, name = 'drreport'),
     path('createreport/', views.createreport, name = 'createreport'),
     path('prescription/', views.prescription, name = 'prescription'),
+    path('appointments/', views.viewappointment, name = 'viewappointment'),
+    path('viewprescriptions/', views.prescription_view, name = 'viewprescription'),
 
+    path('doctorlist/', views.doctor_view, name = 'doctorview'),
+    path('patientlist/', views.patient_view, name = 'patientview'),
 ]

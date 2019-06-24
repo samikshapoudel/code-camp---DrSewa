@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prescriptions</title>
+</head>
+<body>
+<table>
+    {% include 'links.html' %}
+    {% for value in data %}
+        {% include 'prescription_detail.html' with pres=value %}
+    {% endfor %}
+</table>
+</body>
+</html>

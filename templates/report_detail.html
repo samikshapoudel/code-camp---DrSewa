@@ -1,0 +1,31 @@
+<tr>
+<td>Report Id: </td>
+<td> {{report.reportId}} </td>
+</tr>
+<tr>
+<td>Report Date: </td>
+<td>{{report.reportDate.year}}/{{report.reportDate.month}}/{{report.reporDate.date}} </td>
+</tr>
+<tr>
+<td>Content: </td>
+<td>{% for i in report.content %}
+        {{i}} <br>
+    {% endfor %}
+ </td>
+</tr>
+<tr>
+<td>Institute: </td>
+<td>{{report.institute}} </td>
+</tr>
+<tr>
+<td>Patient: </td>
+<td>{{report.patient}} </td>
+</tr>
+<tr>
+<td>Doctor: </td>
+<td>{{report.doctor}} </td>
+</tr>
+
+<tr>
+<td>---------------</td>
+</tr>
