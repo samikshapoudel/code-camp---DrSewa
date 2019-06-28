@@ -2,14 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Prescriptions</title>
+    <title>View Prescriptions</title>
+    {% include 'cssandjs.html' %}
 </head>
 <body>
-<table>
+{% comment %} <table>
     {% include 'links.html' %}
     {% for value in data %}
         {% include 'prescription_detail.html' with pres=value %}
     {% endfor %}
+</table> {% endcomment %}
+{% include 'navbar.html' with who=who %}
+<h2>Prescriptions</h2>
+    <!--Table-->
+<table id="tablePreview" class="table table-hover table-striped">
+<!--Table head-->
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Prescription ID</th>
+      <th>Prescription Date</th>
+      <th>Patient</th>
+      <th>Doctor</th>
+      <th>Diagnosis</th>
+      <th>Medications</th>
+    </tr>
+  </thead>
+  <!--Table head-->
+  <tbody>
+    {% for value in data %}
+        {% include 'prescription_detail.html' with pres=value counter=forloop.counter %}
+    {% endfor %}
+    </tbody>
 </table>
+
+</table>
+
+
 </body>
 </html>

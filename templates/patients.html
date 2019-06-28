@@ -5,17 +5,41 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <title>List of Patients</title>
+    {% include 'cssandjs.html' %}
 </head>
 <body>
-    {% include 'links.html' %}
-<h2>Patient List</h2>
-<table>
+    {% include 'navbar.html' with who=who %}
+<h2>Patients List</h2>
+{% comment %} <table>
     {% for patient in patients %}
     {% include 'patient_list.html' with pat=patient %}
-    {% endfor %}
+    {% endfor %}   
+</table> {% endcomment %}
 
-    
+
+<!--Table-->
+<table id="tablePreview" class="table table-hover table-striped">
+<!--Table head-->
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>EmailId</th>
+      <th>DOB</th>
+      <th>Gender</th>
+      <th>Reports</th>
+      <th>Doctors</th>
+    </tr>
+  </thead>
+  <!--Table head-->
+  <tbody>
+    {% for patient in patients %}
+    {% include 'patient_list2.html' with pat=patient counter=forloop.counter %}
+    {% endfor %}
+</tbody>
 </table>
+
+
 
 </body>
 

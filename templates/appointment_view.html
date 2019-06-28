@@ -2,14 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login as Doctor</title>
+    <title>View Appointments</title>
+    {% include 'cssandjs.html' %}
 </head>
 <body>
-<table>
-    {% include 'links.html' %}
-    {% for value in data %}
+    {% include 'navbar.html' with who=who %}
+    {% comment %} {% for value in data %}
         {% include 'appointment_detail.html' with app=value now=nowdatetime %}
+    {% endfor %} {% endcomment %}
+    
+    <h2>Appointments:</h2>
+
+    <!--Table-->
+<table id="tablePreview" class="table table-hover table-striped">
+<!--Table head-->
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Appointment ID</th>
+      <th>Patient</th>
+      <th>Doctor</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Valid</th>
+      <th>Problems</th>
+      <th>Call</th>
+    </tr>
+  </thead>
+  <!--Table head-->
+  <tbody>
+    {% for value in data %}
+        {% include 'appointment_detail.html' with app=value now=nowdatetime counter=forloop.counter %}
     {% endfor %}
+    </tbody>
 </table>
+
+{{nowdatetime.year}}/{{nowdatetime.month}}/{{nowdatetime.date}};{{nowdatetime.hour}}:{{nowdatetime.minute}}
+
 </body>
 </html>

@@ -2,15 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Upload Documents</title>
+    <title>Create Report Patient</title>
+    {% include 'cssandjs.html' %}
 </head>
 <body>
 
-    {% include 'links.html' %}
-<form action="" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit">
+    {% include 'navbar.html' with who=who %}
+
+   <div style="margin-left:30%;margin-right: 30%; margin-top: 5%">
+    <!-- Material form register -->
+<div class="card">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Create Report</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+<form action="" method="POST" class="border border-light p-5" enctype="multipart/form-data">
+{% csrf_token %}
+
+     <label for="textInput">Institute</label>
+    <input id="textInput" class="form-control mb-4" placeholder="Who verified the report?" type="text" name="institute">
+
+    <label for="textInput">Date of Report</label>
+    <input class="form-control mb-4" type="date" name="dob"/>
+
+     <label for="textInput">Content</label>
+    <input id="textInput" class="form-control mb-4" placeholder="Contents" type="text" name="content">
+
+
+    <button class="btn btn-info btn-block my-4" type="submit" name="register" value="Register">Create My Report</button>
+
+</form>
+</div>
+</div>
+</div>
+
 </form>
 </body>
 </html>

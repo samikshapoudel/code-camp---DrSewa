@@ -3,13 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Prescription</title>
+    {% include 'cssandjs.html' %}
 </head>
 <body>
-    {% include 'links.html' %}
-    <form action="" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit">
+        {% include 'navbar.html' with who=who %}
+
+   <div style="margin-left:30%;margin-right: 30%; margin-top: 5%">
+    <!-- Material form register -->
+<div class="card">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Give Prescription</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+<form action="" method="POST" class="border border-light p-5" enctype="multipart/form-data">
+{% csrf_token %}
+    <label for="textInput">Patient EmailId</label>
+    <input id="defaultLoginFormEmail" class="form-control mb-4" placeholder="patient@email.com" type="email" name="patient">
+  
+     <label for="textInput">Diagnosis</label>
+    <input id="textInput" class="form-control mb-4" placeholder="Diagnosis" type="text" name="diagnosis">
+
+     <label for="textInput">Medications</label>
+    <input id="textInput" class="form-control mb-4" placeholder="Medications list" type="text" name="medications">
+
+    <button class="btn btn-info btn-block my-4" type="submit" name="register" value="Register">Give Prescription</button>
+
+</form>
+</div>
+</div>
+</div>
+
+
 </form>
 </body>
 </html>

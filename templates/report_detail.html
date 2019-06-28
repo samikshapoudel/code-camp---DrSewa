@@ -1,4 +1,4 @@
-<tr>
+{% comment %} <tr>
 <td>Report Id: </td>
 <td> {{report.reportId}} </td>
 </tr>
@@ -28,4 +28,19 @@
 
 <tr>
 <td>---------------</td>
-</tr>
+</tr> {% endcomment %}
+
+{% load mycustomfilters %}
+<tr>
+      <th scope="row">{{counter}}</th>
+      <td>{{report.reportId}}</td>
+      <td>{{report.reportDate.year}}/{{report.reportDate.month}}/{{report.reporDate.date}}</td>
+      <td>{{report.patient|splitByHash}}</td>
+      <td>{{report.doctor|splitByHash}}</td>
+      <td><ul>
+      {% for i in report.content %}
+        <li>{{i}}</li>
+    {% endfor %}
+      </ul></td>
+      <td>{{report.institute}} </td>
+</tr> 

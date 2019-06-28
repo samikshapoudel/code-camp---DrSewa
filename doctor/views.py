@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect, HttpResponse, HttpResponseRedirect
 from django.contrib import messages
 from django.views.generic import TemplateView
 from django.views.generic import CreateView, ListView, UpdateView
@@ -50,9 +50,11 @@ def doctor_signup(request):
         user = Doctor(request.POST)
         doc_dict['name'] = request.POST['username']
         doc_dict['emailId'] = request.POST['email']
-        doc_dict['year'] = request.POST['year']
-        doc_dict['month'] = request.POST['month']
-        doc_dict['date'] = request.POST['date']
+        dob = request.POST['dob']
+        dob = dob.split('-')
+        doc_dict['year'] = dob[0]
+        doc_dict['month'] = dob[1]
+        doc_dict['date'] = dob[2]
         doc_dict['gender'] = request.POST['gender']
         specialities = request.POST['specialities']
         specialities = specialities.split(",")
@@ -71,9 +73,12 @@ def doctor_signup(request):
 
         doc_dict_json = json.dumps(doc_dict)
 
+        print(doc_dict_json)
+
         output = requests.post('http://localhost:3000/api/CreateDoctor', headers={"content-type": "application/json"}   , data=doc_dict_json)
         if (output.status_code == 200):
-            return HttpResponse(output.text+"<br><br><br>"+doc_dict_json)
+            #return HttpResponse(output.text+"<br><br><br>"+doc_dict_json)
+            return redirect('doctor_login')
         else:
             print(output.json)
             return HttpResponse('Something Error: <br>'+ output.text+"<br><br><br>"+doc_dict_json+"<br><br><br>"+"json: "+ str(output.status_code))
@@ -85,8 +90,12 @@ def doctor_login(request):
         return render(request, 'doctor_login.html', {'form':custom_doctor_form})
     elif request.method == 'POST':
         port = request.POST['port']
-        response = HttpResponse("You have logged in")
+        email = request.POST['email']
+        #response = HttpResponse('''You have logged in<br><a href="{% url 'doctorview' %}">Redirect</a>''')
+        response = redirect("doctorview")
         response.set_cookie('id', port)
+        response.set_cookie('email', email)
+        response.set_cookie("category", 'Doctor')
         return response
 
     else:
@@ -120,7 +129,7 @@ def doctor_logout(request):
 def patient_signup(request):
     if request.method == 'GET':
         custom_patient_form = PatientSignUpForm()
-        return render(request, 'doctor_signup.html', {'form':custom_patient_form})
+        return render(request, 'patient_signup.html', {'form':custom_patient_form})
     else:
         patient_dict = {
                 "$class": "com.pax.drsewa.CreatePatient",
@@ -135,9 +144,11 @@ def patient_signup(request):
         user = Patient(request.POST, request.FILES)
         patient_dict['name'] = request.POST['username']
         patient_dict['emailId'] = request.POST['email']
-        patient_dict['year'] = request.POST['year']
-        patient_dict['month'] = request.POST['month']
-        patient_dict['date'] = request.POST['date']
+        dob = request.POST['dob']
+        dob = dob.split('-')
+        patient_dict['year'] = dob[0]
+        patient_dict['month'] = dob[1]
+        patient_dict['date'] = dob[2]
         patient_dict['gender'] = request.POST['gender']
 
         patient_dict_json = json.dumps(patient_dict)
@@ -158,8 +169,12 @@ def patient_login(request):
         return render(request, 'patient_login.html', {'form':custom_patient_form})
     elif request.method == 'POST':
         port = request.POST['port']
-        response = HttpResponse("You have logged in")
+        email = request.POST['email']
+        #response = HttpResponse('''You have logged in<br><a href="{% url 'patientview' %}">Redirect</a>''')
+        response = redirect('patientview')
         response.set_cookie('id', port)
+        response.set_cookie('email', email)
+        response.set_cookie('category', 'Patient')
         return response
     else:
 
@@ -195,7 +210,7 @@ def patient_logout(request):
 def makeappointment(request):
     if request.method == 'GET':
         appointment = Make_appointment_form()
-        return render(request, 'makeappointment.html', {'form':appointment })
+        return render(request, 'makeappointment.html', {'form':appointment, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}})
 
     else:
         appointment_form = Make_appointment_form(request.POST)
@@ -210,11 +225,15 @@ def makeappointment(request):
         "problems": []
         }
         data['doctorEmailId'] = request.POST['doctorEmailId']
-        data['year'] = request.POST['year']
-        data['month'] = request.POST['month']
-        data['date'] = request.POST['date']
-        data['hr'] = request.POST['hr']
-        data['min'] = request.POST['min']
+        dob = request.POST['dob']
+        dob = dob.split('-')
+        data['year'] = dob[0]
+        data['month'] = dob[1]
+        data['date'] = dob[2]
+        time = request.POST['time']
+        time = time.split(':')
+        data['hr'] = time[0]
+        data['min'] = time[1]
         problems = request.POST['problems']
         problems = problems.split(",")
         problems = [i.lstrip() for i in problems]
@@ -225,7 +244,8 @@ def makeappointment(request):
         output = requests.post('http://127.0.0.1:'+request.COOKIES.get('id')+'/api/MakeAppointment', headers={"content-type": "application/json"}, data=data_json)
 
         if (output.status_code == 200):
-            return HttpResponse("Successfully applied appointment<br><br><br>"+output.text+"<br><br><br>")
+            #return HttpResponse("Successfully applied appointment<br><br><br>"+output.text+"<br><br><br>")
+            return redirect('viewappointment')
         else:
             print(output.json)
             return HttpResponse('Something Error: <br>'+ output.text+"<br><br><br>"+"<br><br><br>"+"json: "+ str(output.status_code))
@@ -245,17 +265,17 @@ def viewappointment(request):
     n = datetime.datetime.now()
     nowdatetime = {"year":n.date().year, "month":n.date().month, "date":n.date().day, "hour":n.time().hour, "minute":n.time().minute}
     print(nowdatetime)
-    o = {"data":o, "nowdatetime":nowdatetime}
+    o = {"data":o, "nowdatetime":nowdatetime, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}}
     return render(request, 'appointment_view.html', o)
 
 def doctors(request):
     doctors = Doctor.username
-    return render(request, 'doctors.html', context={'doctors': doctors})
+    return render(request, 'doctors.html', context={'doctors': doctors,"who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}})
 
 def validate(request):
     if request.method=='GET':
         validate = Validate_appointment_form()
-        return render(request, 'validateAppointment.html', {"form": validate})
+        return render(request, 'validateAppointment.html', {"form": validate, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}})
     else:
         data = {
         "$class": "com.pax.drsewa.ValidateAppointment",
@@ -268,20 +288,25 @@ def validate(request):
         "changeDateTime": "false"
         }
         data['appointmentId'] = request.POST['appointment_id']
-        data['year'] = request.POST['year']
-        data['month'] = request.POST['month']
-        data['date'] = request.POST['date']
-        data['hr'] = request.POST['hr']
-        data['min'] = request.POST['min']
-        if request.POST['changedatetime'] == "Yes" or request.POST['changedatetime'] == "yes" or request.POST['changedatetime'] == "Y" or request.POST['changedatetime'] == "y":
+        if request.POST['changedatetime'] == "YES" or request.POST['changedatetime'] == "yes" or request.POST['changedatetime'] == "Y" or request.POST['changedatetime'] == "y":
             data['changeDateTime'] = "true"
+            dob = request.POST['dob']
+            dob = dob.split('-')
+            data['year'] = dob[0]
+            data['month'] = dob[1]
+            data['date'] = dob[2]
+            time = request.POST['time']
+            time = time.split(':')
+            data['hr'] = time[0]
+            data['min'] = time[1]
 
         data_json = json.dumps(data)
         
         output = requests.post('http://127.0.0.1:'+request.COOKIES.get('id')+'/api/ValidateAppointment', headers={"content-type": "application/json"}, data=data_json)
 
         if (output.status_code == 200):
-            return HttpResponse("Successfully validated appointment<br><br><br>"+output.text+"<br><br><br>")
+            #return HttpResponse("Successfully validated appointment<br><br><br>"+output.text+"<br><br><br>")
+            return redirect('viewappointment')
         else:
             print(output.json)
             return HttpResponse('Something Error: <br>'+ output.text+"<br><br><br>"+"<br><br><br>"+"json: "+ str(output.status_code))
@@ -291,7 +316,7 @@ def validate(request):
 def createreport(request):
     if request.method == 'GET':
         report = CreateReport_form()
-        return render(request, 'createreport.html', {'form':report})
+        return render(request, 'createreport.html', {'form':report, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}})
 
     else:
         report_form = CreateReport_form(request.POST)
@@ -304,9 +329,11 @@ def createreport(request):
         "content": [],
         "institute": "string"
         }
-        data['year'] = request.POST['year']
-        data['month'] = request.POST['month']
-        data['date'] = request.POST['date']
+        dob = request.POST['dob']
+        dob = dob.split('-')
+        data['year'] = dob[0]
+        data['month'] = dob[1]
+        data['date'] = dob[2]
         content = request.POST['content']
         content = content.split(',')
         data['content'] = content
@@ -317,7 +344,48 @@ def createreport(request):
         output = requests.post('http://127.0.0.1:'+request.COOKIES.get('id')+'/api/CreateReport', headers={"content-type": "application/json"}, data=data_json)
 
         if (output.status_code == 200):
-            return HttpResponse("Successfully created report<br><br><br>"+output.text+"<br><br><br>")
+            #return HttpResponse("Successfully created report<br><br><br>"+output.text+"<br><br><br>")
+            return redirect('drreport')
+        else:
+            print(output.json)
+            return HttpResponse('Something Error: <br>'+ output.text+"<br><br><br>"+"<br><br><br>"+"json: "+ str(output.status_code))
+
+
+
+def createreportDr(request):
+    if request.method == 'GET':
+        report = CreateReport_form()
+        return render(request, 'createreportDr.html', {'form':report, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}})
+
+    else:
+        report_form = CreateReport_form(request.POST)
+
+        data = {
+        "$class": "com.pax.drsewa.CreateReportDr",
+        "year": 0,
+        "month": 0,
+        "date": 0,
+        "content": [],
+        "institute": "string",
+        "patient": "string"
+        }
+        dob = request.POST['dob']
+        dob = dob.split('-')
+        data['year'] = dob[0]
+        data['month'] = dob[1]
+        data['date'] = dob[2]
+        content = request.POST['content']
+        content = content.split(',')
+        data['content'] = content
+        data['institute'] = request.POST['institute']
+        data['patient'] = request.POST['patient']
+        
+        data_json = json.dumps(data)
+        
+        output = requests.post('http://127.0.0.1:'+request.COOKIES.get('id')+'/api/CreateReportDr', headers={"content-type": "application/json"}, data=data_json)
+
+        if (output.status_code == 200):
+            return redirect('drreport')
         else:
             print(output.json)
             return HttpResponse('Something Error: <br>'+ output.text+"<br><br><br>"+"<br><br><br>"+"json: "+ str(output.status_code))
@@ -330,7 +398,7 @@ def drreport(request):
         # for i in o:
         #     i['patient'] = i.split('#')[1]
         #     i['doctor'] = i.split('#')[1]
-        o = {"data":o}
+        o = {"data":o, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}}
         return render(request, 'report_view.html', o)
         # report = CreateDrReport_form()
         # return render(request, 'report_view.html', {'form':report})
@@ -346,7 +414,7 @@ def drreport(request):
 def recharge(request):
     if request.method == 'GET':
         card = Recharge_form()
-        return render(request, 'recharge.html', {'form':card})
+        return render(request, 'recharge.html', {'form':card, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}})
 
     else:
         card = Recharge_form(request.POST)
@@ -362,7 +430,7 @@ def recharge(request):
 def prescription(request):
     if request.method == 'GET':
         prescription = Prescription_form()
-        return render(request, 'prescription.html', {'form': prescription})
+        return render(request, 'prescription.html', {'form': prescription, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}})
 
     else:
         data = {
@@ -383,7 +451,8 @@ def prescription(request):
         output = requests.post('http://127.0.0.1:'+request.COOKIES.get('id')+'/api/CreatePrescription', headers={"content-type": "application/json"}, data=data_json)
 
         if (output.status_code == 200):
-            return HttpResponse("Successfully created Prescription<br><br><br>"+output.text+"<br><br><br>")
+            #return HttpResponse("Successfully created Prescription<br><br><br>"+output.text+"<br><br><br>")
+            return redirect('viewprescription')
         else:
             print(output.json)
             return HttpResponse('Something Error: <br>'+ output.text+"<br><br><br>"+"<br><br><br>"+"json: "+ str(output.status_code))
@@ -404,7 +473,7 @@ def doctorpage(request):
         report = CreateReport_form()
         prescription = Prescription_form()
         return render(request, 'doctorpage.html', {'patient':patient, 'appointment':appointment, 'report':report,
-'prescription':prescription})
+'prescription':prescription, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}})
 
 
 def prescription_view(request):
@@ -413,21 +482,46 @@ def prescription_view(request):
     # for i in o:
     #     i['patient'] = i.split('#')[1]
     #     i['doctor'] = i.split('#')[1]
-    o = {"data":o}
+    o = {"data":o, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}}
     return render(request, 'prescription_view.html', o)
 
 
 def doctor_view(request):
     output = requests.get('http://127.0.0.1:'+request.COOKIES.get('id')+'/api/Doctor')
     o = json.loads(output.text)
-    o = {"doctors":o}
-    print(o)
+    o = {"doctors":o, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}}
     return render(request, 'doctors.html', o)
 
 def patient_view(request):
     output = requests.get('http://127.0.0.1:'+request.COOKIES.get('id')+'/api/Patient')
     o = json.loads(output.text)
-    o = {"patients":o}
+    o = {"patients":o, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}}
     return render(request, 'patients.html', o)
 
        
+def rating_doctor(request):
+    if request.method=='GET':
+        return render(request, 'ratingDoctor.html', {"who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}})
+    else:
+        data = {
+        "$class": "com.pax.drsewa.RateDoctor",
+        "emailId": "string",
+        "rating": 0
+        }
+        data['emailId'] = request.POST['email']
+        rating = request.POST['rating']
+        if int(rating)>5:
+            rating = 5
+        elif int(rating)<0:
+            rating = 0
+        data['rating'] = str(rating)
+        data_json = json.dumps(data)
+        
+        output = requests.post('http://127.0.0.1:'+request.COOKIES.get('id')+'/api/RateDoctor', headers={"content-type": "application/json"}, data=data_json)
+
+        if (output.status_code == 200):
+            #return HttpResponse("Successfully validated appointment<br><br><br>"+output.text+"<br><br><br>")
+            return redirect('doctorview')
+        else:
+            print(output.json)
+            return HttpResponse('Something Error: <br>'+ output.text+"<br><br><br>"+"<br><br><br>"+"json: "+ str(output.status_code))

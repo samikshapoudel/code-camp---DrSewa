@@ -1,4 +1,4 @@
-<tr>
+{% comment %} <tr>
 <td>Appointment ID: </td>
 <td>{{ app.appointmentId }} </td>
 </tr>
@@ -30,7 +30,7 @@
  </td>
 </tr>
 <tr>
-<td>{{now.year}} / {{now.month}} / {{now.day}} / {{now.hr}}</td>
+<td>{{now.year}} / {{now.month}} / {{now.date}} / {{now.hour}}</td>
 </tr>
 {% if app.date.year == now.year and app.date.month == now.month and app.date.date == now.date  %}
 <tr>
@@ -39,4 +39,25 @@
 {% endif %}
 <tr>
 <td>---------------</td>
-</tr>
+</tr> {% endcomment %}
+
+{% load mycustomfilters %}
+<tr>
+      <th scope="row">{{counter}}</th>
+      <td>{{app.appointmentId}}</td>
+      <td>{{app.patient|splitByHash}}</td>
+      <td>{{app.doctor|splitByHash}}</td>
+      <td>{{ app.date.year }}/{{ app.date.month }}/{{ app.date.date }}</td>
+      <td>{{ app.time.hr }}:{{ app.time.min }}</td>
+      <td>{{ app.valid }} </td>
+      <td><ul>
+      {% for p in app.problems %}
+        <li>{{p}}</li>
+    {% endfor %}</ul></td>
+        <td>
+        {% if app.date.year == now.year and app.date.month == now.month and app.date.date == now.date and app.time.hr == now.hour and app.valid >= 1 %}
+        {% comment %} {% if app.date.year == now.year and app.date.month == now.month and app.date.date == now.date %} {% endcomment %}
+            <button><a href="http://aakritsubedi.com.np/subritt/myproject/">Call</a></button>
+        {% endif %}
+        </td>
+</tr> 

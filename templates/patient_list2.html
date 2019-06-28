@@ -1,0 +1,17 @@
+{% load mycustomfilters %}
+
+<tr>
+      <th scope="row">{{counter}}</th>
+      <td>{{pat.name}}</td>
+      <td>{{pat.emailId}}</td>
+      <td>{{pat.dob.year}}/{{pat.dob.month}}/{{pat.dob.date}}</td>
+      <td>{{pat.gender}}</td>
+      <td><ul>{% for i in pat.reports %}
+        <li>{{i|splitByHash}}</li> 
+    {% endfor %}</ul></td>
+      <td><ul>
+      {% for i in pat.allowedDr %}
+        <li>{{i|splitByHash}}</li>
+      {% endfor %}
+      </ul></td>
+</tr>

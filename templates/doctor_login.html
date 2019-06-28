@@ -3,23 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Login as Doctor</title>
+
+    {% include 'cssandjs.html' %}
 </head>
 <body>
 
-    {% include 'links.html' %}
-    <div class="jumbotron">
-    <form action="{% url 'doctor_login' %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        <label>Email</label>
-        <input type="text" name = 'email' class="form-control">
-        <label>Password</label>
-        <input type="password" name = 'password' class="form-control">
-        <label> port </label>
-        <input type="number" name = "port" class="form-control">
-        <label>Gender</label>
-        <input type="checkbox" name = 'gender' value="male" class="form-control"> Male
-        <input type="checkbox" name="gender" value="female" /> Female
-        <input type="submit" value="Login" class="btn btn-dark" >
+    {% include 'navbar.html' %}
+
+   <div style="margin-left:30%;margin-right: 30%; margin-top: 5%">
+    <!-- Material form register -->
+<div class="card">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Doctor Login</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+<form action="" method="POST" class="border border-light p-5" enctype="multipart/form-data">
+{% csrf_token %}
+    <label for="textInput">EmailId</label>
+    <input id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" type="email" name="email">
+
+    <label for="textInput">Password</label>
+    <input id="textInput" class="form-control mb-4" placeholder="Password" type="password" name="password">
+
+    <label for="textInput">Port</label>
+    <input id="textInput" class="form-control mb-4" placeholder="Port No" type="number" name="port">
+
+    <button class="btn btn-info btn-block my-4" type="submit" name="register" value="Register">Sign In</button>
+
+    <div class="text-center">
+        <p>Do no have Account?
+            <a href="{% url 'doctor_signup' %}">Sign up</a>
+        </p>
+
+        <p>or sign in with:</p>
+
+        <a type="button" class="light-blue-text mx-2">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+
 </form>
+</div>
+</div>
+</div>
+
 </body>
 </html>

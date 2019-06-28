@@ -2,14 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login as Doctor</title>
+    <title>View Reports</title>
+    {% include 'cssandjs.html' %}
 </head>
 <body>
-<table>
-    {% include 'links.html' %}
+
+    {% comment %} {% include 'links.html' %}
     {% for value in data %}
         {% include 'report_detail.html' with report=value %}
+    {% endfor %} {% endcomment %}
+
+    {% include 'navbar.html' with who=who %}
+
+    <h2>Reports</h2>
+    <!--Table-->
+<table id="tablePreview" class="table table-hover table-striped">
+<!--Table head-->
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Report ID</th>
+      <th>Report Date</th>
+      <th>Patient</th>
+      <th>Doctor</th>
+      <th>Content</th>
+      <th>Institute</th>
+    </tr>
+  </thead>
+  <!--Table head-->
+  <tbody>
+    {% for value in data %}
+        {% include 'report_detail.html' with report=value counter=forloop.counter %}
     {% endfor %}
+    </tbody>
 </table>
+
+</table>
+
 </body>
 </html>

@@ -2,14 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Upload Documents</title>
+    <title>Validate Appointment</title>
+    {% include 'cssandjs.html' %}
 </head>
 <body>
-    {% include 'links.html' %}
-<form action="" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit">
+    {% include 'navbar.html' with who=who %}
+
+   <div style="margin-left:30%;margin-right: 30%; margin-top: 5%">
+    <!-- Material form register -->
+<div class="card">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Validate Appointment</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+<form action="" method="POST" class="border border-light p-5" enctype="multipart/form-data">
+{% csrf_token %}
+     <label for="textInput">Appointment ID</label>
+    <input id="textInput" class="form-control mb-4" placeholder="Appointment ID" type="text" name="appointment_id">
+
+    <label for="textInput">Change Appointment Date and Time</label>   
+    <select name="changedatetime" class="form-control mb-4">
+    <option value="" disabled selected>Change Date Time </option>
+    <option value="YES">Yes</option>
+    <option value="NO">No</option>
+    </select>
+
+    <label for="textInput">Date of Appointment</label>
+    <input class="form-control mb-4" type="date" name="dob"/>
+
+    <label for="textInput">Time of Appointment</label>
+    <input class="form-control mb-4" type="time" name="time"/>
+
+    <button class="btn btn-info btn-block my-4" type="submit" name="register" value="Register">Validate Appointment</button>
+    </div>
+
+</form>
+</div>
+</div>
+</div>
 </form>
 </body>
 </html>

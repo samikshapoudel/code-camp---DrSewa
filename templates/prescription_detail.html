@@ -1,4 +1,4 @@
-<tr>
+{% comment %} <tr>
 <td>Prescription Id: </td>
 <td>{{pres.prescriptionId}} </td>
 </tr>
@@ -27,4 +27,19 @@
 </tr>
 <tr>
 <td>---------------</td>
-</tr>
+</tr> {% endcomment %}
+
+{% load mycustomfilters %}
+<tr>
+      <th scope="row">{{counter}}</th>
+      <td>{{pres.prescriptionId}}</td>
+      <td>{{pres.prescriptionDate.year}}/{{pres.prescriptionDate.month}}/{{pres.prescriptionDate.date}}</td>
+      <td>{{pres.patient|splitByHash}}</td>
+      <td>{{pres.doctor|splitByHash}}</td>
+      <td>{{pres.diagnosis}} </td>
+      <td><ul>
+      {% for i in pres.medications %}
+        <li>{{i}}</li>
+    {% endfor %}
+      </ul></td>
+</tr> 

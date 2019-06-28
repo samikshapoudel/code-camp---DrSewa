@@ -1,0 +1,93 @@
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark default-color">
+
+  
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" style="margin-right:10%;">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Doctor</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'doctor_signup' %}">Doctor Sign Up (D)</a>
+          <a class="dropdown-item" href="{% url 'doctor_login' %}">Doctor Sign In (D)</a>
+          <a class="dropdown-item" href="{% url 'doctorview' %}">Doctor List</a>
+        </div>
+      </li>
+      
+       <!-- Dropdown -->
+      <li class="nav-item dropdown" style="margin-right:10%;">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Patient</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'patient_signup' %}">Patient Sign Up (P)</a>
+          <a class="dropdown-item" href="{% url 'patient_login' %}">Patient Sign In (P)</a>
+          <a class="dropdown-item" href="{% url 'patientview' %}">Patient List</a>
+        </div>
+      </li>
+
+       <!-- Dropdown -->
+      <li class="nav-item dropdown" style="margin-right:10%;">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Appointment</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'viewappointment' %}">View Appointment</a>
+          <a class="dropdown-item" href="{% url 'makeappointment' %}">Make Appointment (P)</a>
+          <a class="dropdown-item" href="{% url 'validate' %}">Validate Appointment (D)</a>
+        </div>
+      </li>
+
+       <!-- Dropdown -->
+      <li class="nav-item dropdown" style="margin-right:10%;">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Report</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'drreport' %}">View Report</a>
+          <a class="dropdown-item" href="{% url 'createreport' %}">Create Report (P)</a>
+          <a class="dropdown-item" href="{% url 'createreportDr' %}">Create Report (D)</a>
+        </div>
+      </li>
+
+
+       <!-- Dropdown -->
+      <li class="nav-item dropdown" style="margin-right:10%;">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Prescriptions</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'viewprescription' %}">View Prescriptions</a>
+          <a class="dropdown-item" href="{% url 'prescription' %}">Give Prescriptions (D)</a>
+        </div>
+      </li>
+
+         <!-- Dropdown -->
+      <li class="nav-item dropdown" style="margin-right:10%;">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Others</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Recharge Account (P)</a>
+          <a class="dropdown-item" href="{% url 'ratingdoctor' %}">Rate Doctor (P)</a>
+          <a class="dropdown-item" href="#">LogOut</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+      {{who.email}}({{who.category}})
+      </li>
+
+    </ul>
+    <!-- Links -->
+
+
+</nav>
+<!--/.Navbar-->

@@ -1,0 +1,24 @@
+<tr>
+      <th scope="row">{{counter}}</th>
+      <td>{{doc.name}}</td>
+      <td>{{doc.emailId}}</td>
+      <td>{{doc.dob.year}}/{{doc.dob.month}}/{{doc.dob.date}}</td>
+      <td>{{doc.gender}}</td>
+      <td>{{doc.rating}}</td>
+      <td><ul>
+        {% for i in doc.specialities %}
+        <li>{{i}}</li>
+    {% endfor %}
+      </ul></td>
+      <td><ul>
+      {% for i in doc.education %}
+        <li>{{i}}</li>
+    {% endfor %}
+      </ul></td>
+      <td><ul> 
+      {% for i in doc.hospitals %}
+        <li>{{i}}</li>
+    {% endfor %} </td>
+    </ul></td>
+      <td width="15%">{{doc.description}}</td>
+    </tr>
