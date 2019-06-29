@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recharge Account</title>
+    {% include 'cssandjs.html' %}
+</head>
+<body>
+        {% include 'navbar.html' with who=who %}
+
+   <div style="margin-left:30%;margin-right: 30%; margin-top: 5%">
+    <!-- Material form register -->
+<div class="card">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Recharge Account</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+<form action="" method="POST" class="border border-light p-5" enctype="multipart/form-data">
+{% csrf_token %}
+ 
+     <label for="textInput">NTC recharge PIN: </label>
+    <input id="textInput" class="form-control mb-4" placeholder="********" type="number" name="recharge">
+
+    <button class="btn btn-info btn-block my-4" type="submit" name="register" value="Register">Recharge</button>
+
+</form>
+</div>
+</div>
+</div>
+
+
+</form>
+</body>
+</html>

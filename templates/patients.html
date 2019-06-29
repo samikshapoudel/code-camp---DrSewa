@@ -9,7 +9,11 @@
 </head>
 <body>
     {% include 'navbar.html' with who=who %}
+    {% if who.category == "Doctor" %}
 <h2>Patients List</h2>
+{% else %}
+<h2>My Profile</h2>
+{% endif %}
 {% comment %} <table>
     {% for patient in patients %}
     {% include 'patient_list.html' with pat=patient %}
@@ -29,12 +33,15 @@
       <th>Gender</th>
       <th>Reports</th>
       <th>Doctors</th>
+      {% if who.category == "Patient" %}
+      <th>Balance</th>
+      {% endif %}
     </tr>
   </thead>
   <!--Table head-->
   <tbody>
     {% for patient in patients %}
-    {% include 'patient_list2.html' with pat=patient counter=forloop.counter %}
+    {% include 'patient_list2.html' with pat=patient who=who counter=forloop.counter %}
     {% endfor %}
 </tbody>
 </table>

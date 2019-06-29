@@ -20,8 +20,10 @@
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">Doctor</a>
         <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="{% url 'doctor_signup' %}">Doctor Sign Up (D)</a>
-          <a class="dropdown-item" href="{% url 'doctor_login' %}">Doctor Sign In (D)</a>
+        {% if who.category != "Doctor" and who.category != "Patient" %}
+          <a class="dropdown-item" href="{% url 'doctor_signup' %}">Doctor Sign Up</a>
+          <a class="dropdown-item" href="{% url 'doctor_login' %}">Doctor Sign In</a>
+          {% endif %}
           <a class="dropdown-item" href="{% url 'doctorview' %}">Doctor List</a>
         </div>
       </li>
@@ -31,20 +33,33 @@
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">Patient</a>
         <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="{% url 'patient_signup' %}">Patient Sign Up (P)</a>
-          <a class="dropdown-item" href="{% url 'patient_login' %}">Patient Sign In (P)</a>
-          <a class="dropdown-item" href="{% url 'patientview' %}">Patient List</a>
+        {% if who.category != "Doctor" and who.category != "Patient" %}
+          <a class="dropdown-item" href="{% url 'patient_signup' %}">Patient Sign Up</a>
+          <a class="dropdown-item" href="{% url 'patient_login' %}">Patient Sign In</a>
+          {% else %}
+          <a class="dropdown-item" href="{% url 'patientview' %}">
+          {% if who.category == "Doctor" %}
+          Patient List
+          {% else %}
+          My Profile
+          {% endif %}
+          </a>
+          {% endif %}
         </div>
       </li>
 
+      {% if who.category == "Doctor" or who.category == "Patient" %}
        <!-- Dropdown -->
       <li class="nav-item dropdown" style="margin-right:10%;">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">Appointment</a>
         <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="{% url 'viewappointment' %}">View Appointment</a>
-          <a class="dropdown-item" href="{% url 'makeappointment' %}">Make Appointment (P)</a>
-          <a class="dropdown-item" href="{% url 'validate' %}">Validate Appointment (D)</a>
+          {% if who.category == "Patient"%}
+          <a class="dropdown-item" href="{% url 'makeappointment' %}">Make Appointment</a>
+          {% else %}
+          <a class="dropdown-item" href="{% url 'validate' %}">Validate Appointment</a>
+          {% endif %}
         </div>
       </li>
 
@@ -54,8 +69,11 @@
           aria-haspopup="true" aria-expanded="false">Report</a>
         <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="{% url 'drreport' %}">View Report</a>
-          <a class="dropdown-item" href="{% url 'createreport' %}">Create Report (P)</a>
-          <a class="dropdown-item" href="{% url 'createreportDr' %}">Create Report (D)</a>
+          {% if who.category == "Patient" %}
+          <a class="dropdown-item" href="{% url 'createreport' %}">Create Report</a>
+          {% else %}
+          <a class="dropdown-item" href="{% url 'createreportDr' %}">Create Report</a>
+          {% endif %}
         </div>
       </li>
 
@@ -66,7 +84,9 @@
           aria-haspopup="true" aria-expanded="false">Prescriptions</a>
         <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="{% url 'viewprescription' %}">View Prescriptions</a>
-          <a class="dropdown-item" href="{% url 'prescription' %}">Give Prescriptions (D)</a>
+          {% if who.category == "Doctor" %}
+          <a class="dropdown-item" href="{% url 'prescription' %}">Give Prescriptions</a>
+          {% endif %}
         </div>
       </li>
 
@@ -75,15 +95,18 @@
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">Others</a>
         <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Recharge Account (P)</a>
-          <a class="dropdown-item" href="{% url 'ratingdoctor' %}">Rate Doctor (P)</a>
-          <a class="dropdown-item" href="#">LogOut</a>
+          {% if who.category == "Patient" %}
+          <a class="dropdown-item" href="{% url 'recharge' %}">Recharge Account</a>
+          <a class="dropdown-item" href="{% url 'ratingdoctor' %}">Rate Doctor</a>
+          {% endif %}
+          <a class="dropdown-item" href="{% url 'logout' %}">LogOut</a>
         </div>
       </li>
 
       <li class="nav-item">
       {{who.email}}({{who.category}})
       </li>
+      {% endif %}
 
     </ul>
     <!-- Links -->

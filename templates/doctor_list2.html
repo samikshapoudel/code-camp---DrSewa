@@ -4,7 +4,7 @@
       <td>{{doc.emailId}}</td>
       <td>{{doc.dob.year}}/{{doc.dob.month}}/{{doc.dob.date}}</td>
       <td>{{doc.gender}}</td>
-      <td>{{doc.rating}}</td>
+      <td>{{doc.rating|floatformat:2}}</td>
       <td><ul>
         {% for i in doc.specialities %}
         <li>{{i}}</li>

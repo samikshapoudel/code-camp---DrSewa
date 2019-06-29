@@ -15,6 +15,17 @@
 </table> {% endcomment %}
 {% include 'navbar.html' with who=who %}
 <h2>Doctors List</h2>
+
+<!-- Search form -->
+{% comment %} <div style="width:30%; align:right"> {% endcomment %}
+<form class="form-inline md-form form-sm mt-0" method="POST" name="searchBySpecialities">
+{% csrf_token %}
+<div class="active-cyan-3 active-cyan-4 mb-4">
+  <input class="form-control" type="text" placeholder="{{searchvalue}}" aria-label="Search" name="searchkey">
+</div>
+</form>
+{% comment %} </div> {% endcomment %}
+
 <!--Table-->
 <table id="tablePreview" class="table table-hover table-striped">
 <!--Table head-->

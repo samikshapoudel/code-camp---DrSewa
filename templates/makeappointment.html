@@ -8,8 +8,9 @@
 <body>
 
     {% include 'navbar.html' with who=who %}
-
+{% comment %} {% if is_mobile == "False" %} {% endcomment %}
    <div style="margin-left:30%;margin-right: 30%; margin-top: 5%">
+{% comment %} {% endif %} {% endcomment %}
     <!-- Material form register -->
 <div class="card">
 
@@ -23,7 +24,7 @@
 <form action="" method="POST" class="border border-light p-5" enctype="multipart/form-data">
 {% csrf_token %}
     <label for="textInput">Doctor EmailId</label>
-    <input id="defaultLoginFormEmail" class="form-control mb-4" placeholder="doctor@email.com" type="email" name="doctorEmailId">
+    <input id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Doctor Email" type="email" name="doctorEmailId">
     
     <label for="textInput">Date of Appointment</label>
     <input class="form-control mb-4" type="date" name="dob"/>

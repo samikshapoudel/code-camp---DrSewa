@@ -14,4 +14,7 @@
         <li>{{i|splitByHash}}</li>
       {% endfor %}
       </ul></td>
+      {% if who.category == "Patient" %}
+      <td>{{pat.balance}}</td>
+      {% endif %}
 </tr>

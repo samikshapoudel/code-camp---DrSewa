@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 import requests
 import json
 import datetime
+import re
 
 logged_user = {}
 
@@ -155,7 +156,7 @@ def patient_signup(request):
 
         output = requests.post('http://localhost:3000/api/CreatePatient', headers={"content-type": "application/json"}, data=patient_dict_json)
         if (output.status_code == 200):
-            return HttpResponse(output.text + "<br><br><br>" + patient_dict_json)
+            return redirect('patient_login')
         else:
             print(output.json)
             return HttpResponse(
@@ -200,9 +201,13 @@ def patient_login(request):
         #     return redirect('patient_signup')
 
 
-def patient_logout(request):
-    logout(request)
-    return redirect("patient_login")    
+def user_logout(request):
+    response = redirect('patient_login')
+    if request.COOKIES.get('category') == "Doctor":
+        response = redirect('doctor_login')
+    response.delete_cookie('email')
+    response.delete_cookie('category')
+    return response   
 
 
 
@@ -210,7 +215,8 @@ def patient_logout(request):
 def makeappointment(request):
     if request.method == 'GET':
         appointment = Make_appointment_form()
-        return render(request, 'makeappointment.html', {'form':appointment, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}})
+        is_mobile = mobile(request)
+        return render(request, 'makeappointment.html', {'form':appointment, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}, "is_mobile":is_mobile})
 
     else:
         appointment_form = Make_appointment_form(request.POST)
@@ -417,8 +423,19 @@ def recharge(request):
         return render(request, 'recharge.html', {'form':card, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}})
 
     else:
-        card = Recharge_form(request.POST)
-        
+        rechargepin = request.POST['recharge']
+        data = {
+        "$class": "com.pax.drsewa.RechargeBalance",
+        "rechargeCard": 0
+        }
+        data['rechargeCard'] = rechargepin
+        data_json = json.dumps(data)
+        output = requests.post('http://127.0.0.1:'+request.COOKIES.get('id')+'/api/RechargeBalance', headers={"content-type": "application/json"}, data=data_json)
+
+        if (output.status_code == 200):
+            return redirect('patientview')
+        else:
+            return HttpResponse('<h2>Recharge Invalid</h2> <br>'+ output.text+"<br><br><br>"+"<br><br><br>"+"json: "+ str(output.status_code))
         # if card.is_valid():
         #     card.recharge_card+=card
         #     return HttpResponse('Balance added successfully')
@@ -487,10 +504,24 @@ def prescription_view(request):
 
 
 def doctor_view(request):
-    output = requests.get('http://127.0.0.1:'+request.COOKIES.get('id')+'/api/Doctor')
-    o = json.loads(output.text)
-    o = {"doctors":o, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}}
-    return render(request, 'doctors.html', o)
+    if request.method == 'GET':
+        output = requests.get('http://127.0.0.1:'+request.COOKIES.get('id')+'/api/Doctor')
+        o = json.loads(output.text)
+        o.sort(key = lambda x: x['rating'], reverse=True)
+        o = {"doctors":o, "searchvalue":"search by specialities", "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}}
+        return render(request, 'doctors.html', o)
+    elif request.method == 'POST':
+        output = requests.get('http://127.0.0.1:'+request.COOKIES.get('id')+'/api/Doctor')
+        o = json.loads(output.text)
+        o.sort(key = lambda x: x['rating'], reverse = True)
+        l = []
+        searchkey = request.POST['searchkey']
+        for i in o:
+            if re.search(searchkey, str(i['specialities']), flags=re.IGNORECASE):
+                l.append(i)
+        o = {"doctors":l, "searchvalue":searchkey, "who":{"email": request.COOKIES.get('email'), "category": request.COOKIES.get("category")}}
+        return render(request, 'doctors.html', o)
+
 
 def patient_view(request):
     output = requests.get('http://127.0.0.1:'+request.COOKIES.get('id')+'/api/Patient')
@@ -525,3 +556,14 @@ def rating_doctor(request):
         else:
             print(output.json)
             return HttpResponse('Something Error: <br>'+ output.text+"<br><br><br>"+"<br><br><br>"+"json: "+ str(output.status_code))
+
+
+
+
+def mobile(request):
+    MOBILE_AGENT_RE=re.compile(r".*(iphone|mobile|androidtouch)",re.IGNORECASE)
+
+    if MOBILE_AGENT_RE.match(request.META['HTTP_USER_AGENT']):
+        return True
+    else:
+        return False
